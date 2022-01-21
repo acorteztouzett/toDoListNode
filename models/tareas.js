@@ -100,7 +100,8 @@ class Tareas {
 
             const tarea = this._listado[id];
             if ( !tarea.completadoEn ) {
-                tarea.completadoEn = new Date().toISOString()
+                let fecha = new Date().toISOString()
+                tarea.completadoEn=fecha.slice(0,10)
             }
 
         });
